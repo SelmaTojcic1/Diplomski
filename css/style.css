@@ -1,0 +1,91 @@
+.container-fluid {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px 0px 50px 10px;
+    position: relative;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+}
+
+.headline {
+    margin-bottom: 30px;
+}
+
+.contentbox {
+    border: 2px solid rgb(226, 226, 226);
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+.btn-primary {
+    background-color: #8064A2 !important;
+    border-color: #8064A2 !important;
+    margin-left: 20px !important;
+}
+
+input[name="spol"], input[name="godina"], 
+input[name="ucestalost1"], input[name="ucestalost2"], input[name="ucestalost3"], input[name="ucestalost4"], 
+input[name="vaznost1"], input[name="vaznost2"], input[name="vaznost3"], input[name="vaznost4"],
+input[name="rizik1"], input[name="rizik2"], input[name="rizik3"], input[name="rizik4"], input[name="rizik5"] {
+	accent-color: #8064A2;
+}
+
+td {
+    vertical-align: middle;
+}
+
+th {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+ .dugmic {
+    position: absolute;
+    right: 15px;
+}
+
+.pokreni {
+    text-align: center !important;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px solid lightcoral;
+    background: lightcoral;
+}
+
+.pokreni > input {
+    position: relative;
+    top: 40px;
+    width: 200px;
+}
+
+p.j {
+    text-align: justify;
+}
+
+.linkovi {
+    text-align: center;
+    width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration:none;
+}
+
