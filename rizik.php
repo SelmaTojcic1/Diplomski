@@ -1,3 +1,22 @@
+<?php
+    session_start();
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_POST['dalje'])) {
+            include 'konekcija.php';
+            $sessionNum = mysqli_insert_id($con);
+            $_SESSION['sid'] = $sessionNum;         
+            $rizik1 = $_POST['rizik1'];
+            $rizik2  = $_POST['rizik2'];
+            $rizik3 = $_POST['rizik3'];
+            $rizik4 = $_POST['rizik4'];
+            $rizik5 = $_POST['rizik5'];
+            $sql = "UPDATE diplomski SET p9=$rizik1, p10=$rizik2, p11=$rizik3, p12=$rizik4, p13=$rizik5 WHERE 'sID'=$sessionNum" ;
+            mysqli_query($con, $sql);
+            header('Location: ' . 'rizik.php');          
+        } 
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

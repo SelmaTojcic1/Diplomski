@@ -1,3 +1,21 @@
+<?php
+    session_start();
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_POST['dalje'])) {
+            include 'konekcija.php';
+            $sessionNum = mysqli_insert_id($con);
+            $_SESSION['sid'] = $sessionNum;         
+            $ucestalost1 = $_POST['ucestalost1'];
+            $ucestalost2  = $_POST['ucestalost2'];
+            $ucestalost3 = $_POST['ucestalost3'];
+            $ucestalost4 = $_POST['ucestalost4'];
+            $sql = "UPDATE diplomski SET p1=$ucestalost1, p2=$ucestalost2, p3=$ucestalost3, p4=$ucestalost4 WHERE 'sID'=$sessionNum" ;
+            mysqli_query($con, $sql);
+            header('Location: ' . 'vaznost.php');          
+        } 
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

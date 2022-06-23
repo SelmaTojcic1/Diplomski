@@ -1,17 +1,16 @@
 <?php
+    session_start();
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['dalje'])) {
-            session_start();
-            include $_SESSION['konekcija'];            
-            $spol       = $_POST['spol'];
-            $dob        = $_POST['dob'];
-            $godina     = $_POST['godina'];
-            $sql        = "INSERT INTO {$_SESSION['table_name']} (spol, dob, godina) VALUES ('" . $spol . "','" . $dob . "','" . $godina . "')";
+            include 'konekcija.php';            
+            $spol = $_POST['spol'];
+            $dob  = $_POST['dob'];
+            $godina = $_POST['godina'];
+            $sql = "INSERT INTO diplomski (spol, dob, godina) VALUES ('" . $spol . "','" . $dob . "','" . $godina . "')";
             mysqli_query($con, $sql);
             $sessionNum = mysqli_insert_id($con);
             $_SESSION['sid'] = $sessionNum;
-            $_SESSION['current_index'] = 1;
-            header('Location: ' . $_SESSION['order'][$_SESSION['current_index']]);          //?
+            header('Location: ' . 'ucestalost.php');          
         } 
     }
 ?>

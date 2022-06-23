@@ -11,9 +11,9 @@
     }
 	mysqli_select_db($con, "diplomski");
 
-    $tb_test = mysqli_query($con, "SHOW TABLES LIKE {$_SESSION['table_name']}");
+    $tb_test = mysqli_query($con, "SHOW TABLES LIKE diplomski");
     if(!$tb_test) {
-        $sql = "CREATE TABLE {$_SESSION['table_name']} 
+        $sql = "CREATE TABLE diplomski
                 (
                     sID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
                     spol INTEGER UNSIGNED,
