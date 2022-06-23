@@ -12,7 +12,7 @@
             $rizik5 = $_POST['rizik5'];
             $sql = "UPDATE diplomski SET p9=$rizik1, p10=$rizik2, p11=$rizik3, p12=$rizik4, p13=$rizik5 WHERE 'sID'=$sessionNum" ;
             mysqli_query($con, $sql);
-            header('Location: ' . 'rizik.php');          
+            header('Location: ' . 'kraj.php');          
         } 
     }
 ?>
